@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+<category>
+    
+    <pattern>START</pattern>
+    
+    <template>
+        Hi there, welcome to the career quiz! <split/>
+        We will ask you a few questions about yourself to figure out what your preferred career should be. Do you wish to begin?
+        
+        <button>
+            <text>Yes!</text>
+            <postback>YES</postback>
+        </button>
+        
+        <button>
+            <text>No, I'm finished with the chat.</text>
+            <postback>NO</postback>
+        </button>
+        
+        </template>
+        
+</category>
+
+<category>
+    
+    <pattern>NO</pattern>
+    
+    <template>I'm sorry that we weren't able to help you. Good luck in the future of your career search!</template>
+    
+</category>
+
+<category>
+    
+    <pattern>EXIT</pattern>
+    
+    <template>I hope that we were able to help, good luck in your future career!</template>
+    
+</category>
+
+<category>
+    
+    <pattern>*</pattern>
+    
+    <template>I'm sorry we didn't get that. Please type "start" if you wish to begin the quiz!</template>
+    
+</category>
+
+<category>
+    <pattern>YES</pattern>
+    <template>
+        
+        Are you interested in a career in technology?
+        
+        <button>
+            <text>Yes</text>
+            <postback>YESTECH</postback>
+        </button>
+        
+        <button>
+            <text>No</text>
+            <postback>NOTECH</postback>
+        </button>
+        
+    </template>
+</category>
+
+<category>
+    
+    <pattern>NOTECH</pattern>
+    
+    <template>
+        
+        I'm sorry we only currently offer advice on careers in technology.
+        
+         <button>
+            <text>Take quiz again</text>
+            <postback>YES</postback>
+        </button>
+        
+        <button>
+            <text>No, I'm finished with the chat.</text>
+            <postback>NO</postback>
+        </button>
+        
+    </template>
+    
+</category>
+
+<category>
+    <pattern>YESTECH</pattern>
+    <template>
+        
+        Do you like to code?
+        
+        <button>
+            <text>Yes</text>
+            <postback>YESCODE</postback>
+        </button>
+        
+        <button>
+            <text>No</text>
+            <postback>NOCODE</postback>
+        </button>
+        
+    </template>
+</category>
+
+<category>
+    <pattern>YESCODE</pattern>
+    <template>
+        
+        Do you like to work with visual elements? Or would you prefer to work with things behind the scenes?
+        
+        <button>
+            <text>Visual elements</text>
+            <postback>FRONTEND</postback>
+        </button>
+        
+        <button>
+            <text>Behind the scenes</text>
+            <postback>BACKEND</postback>
+        </button>
+        
+    </template>
+</category>
+
+<category>
+    <pattern>NOCODE</pattern>
+    <template>
+        
+        Do you like leading a team?
+        
+        <button>
+            <text>Yes</text>
+            <postback>MANAGER</postback>
+        </button>
+        
+        <button>
+            <text>No</text>
+            <postback>NOTEAM</postback>
+        </button>
+        
+    </template>
+</category>
+
+<category>
+    <pattern>NOTEAM</pattern>
+    <template>
+        
+        Are you a creative or a more practical person?
+        
+        <button>
+            <text>Creative!</text>
+            <postback>GRAPHIC</postback>
+        </button>
+        
+        <button>
+            <text>Practical!</text>
+            <postback>NETWORK</postback>
+        </button>
+        
+    </template>
+</category>
+
+<category>
+    <pattern>FRONTEND</pattern>
+    <template>
+        
+        According to your answers, we believe that you should become a Web Developer! <break/>
+        For more information
+        <link>
+            <text>click here!</text>
+            <url>https://www.itcareerfinder.com/it-careers/web-developer.html</url>
+        </link>
+        
+        <button>
+            <text>Take quiz again</text>
+            <postback>YES</postback>
+        </button>
+        
+        <button>
+            <text>No, I'm finished with the chat.</text>
+            <postback>EXIT</postback>
+        </button>
+        
+    </template>
+</category>
+
+<category>
+    <pattern>BACKEND</pattern>
+    <template>
+        
+        According to your answers, we believe that you should become a Software Engineer! <break/>
+        For more information
+        <link>
+            <text>click here!</text>
+            <url>https://www.itcareerfinder.com/it-careers/software-engineer.html</url>
+        </link>
+        
+        <button>
+            <text>Take quiz again</text>
+            <postback>YES</postback>
+        </button>
+        
+        <button>
+            <text>No, I'm finished with the chat.</text>
+            <postback>EXIT</postback>
+        </button>
+        
+    </template>
+</category>
+
+<category>
+    <pattern>MANAGER</pattern>
+    <template>
+        
+        According to your answers, we believe that you should become a IT Manager! <break/>
+        For more information
+        <link>
+            <text>click here!</text>
+            <url>https://www.itcareerfinder.com/it-careers/it-manager.html</url>
+        </link>
+        
+        <button>
+            <text>Take quiz again</text>
+            <postback>YES</postback>
+        </button>
+        
+        <button>
+            <text>No, I'm finished with the chat.</text>
+            <postback>EXIT</postback>
+        </button>
+        
+    </template>
+</category>
+
+<category>
+    <pattern>GRAPHIC</pattern>
+    <template>
+        
+        According to your answers, we believe that you should become a Graphic Designer! <break/>
+        For more information
+        <link>
+            <text>click here!</text>
+            <url>https://www.itcareerfinder.com/it-careers/graphic-designer.html</url>
+        </link>
+        
+        <button>
+            <text>Take quiz again</text>
+            <postback>YES</postback>
+        </button>
+        
+        <button>
+            <text>No, I'm finished with the chat.</text>
+            <postback>EXIT</postback>
+        </button>
+        
+    </template>
+</category>
+
+<category>
+    <pattern>NETWORK</pattern>
+    <template>
+        
+        According to your answers, we believe that you should become a Network Administrator! <break/>
+        For more information
+        <link>
+            <text>click here!</text>
+            <url>https://www.itcareerfinder.com/it-careers/network-administrator.html</url>
+        </link>
+        
+        <button>
+            <text>Take quiz again</text>
+            <postback>YES</postback>
+        </button>
+        
+        <button>
+            <text>No, I'm finished with the chat.</text>
+            <postback>EXIT</postback>
+        </button>
+        
+    </template>
+</category>
+  
+</aiml>
